@@ -14,12 +14,13 @@ public class IOSocketServer {
 
 	public static void main(String[] args) {
 		try {
-			// 第一个阻塞点：初始化服务器socket
-			ServerSocket ss = new ServerSocket(8888);
+			//创建服务端
+			ServerSocket serverSocket = new ServerSocket(8888);
 			System.out.println("服务端启动了...");
 			while (true) {
+				// 第一个阻塞点：初始化服务器socket
 				// 获取socket客户端 套接字
-				Socket socket = ss.accept();
+				Socket socket = serverSocket.accept();
 				System.out.println("新客户端连接上来了...");
 				// 获取客户端输入流
 				InputStream in = socket.getInputStream();
