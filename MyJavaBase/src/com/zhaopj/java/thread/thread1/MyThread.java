@@ -15,7 +15,7 @@ package com.zhaopj.java.thread.thread1;
 public class MyThread extends Thread {
 	
 	// 为了保持票数的一致，票数要静态
-    static int ticket = 20;
+    static int ticket = 20; //volatile
     static int ticketCount = 0;
     
 	// 创建一个静态钥匙
@@ -41,12 +41,11 @@ public class MyThread extends Thread {
 					System.out.println("票卖完了");
 				}
 				try {
-					sleep(1000); //休息一秒
+					sleep(500); //休息0.5秒
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
-			
 		}
 	}
 	
