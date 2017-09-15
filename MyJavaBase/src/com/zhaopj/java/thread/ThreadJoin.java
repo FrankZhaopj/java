@@ -3,7 +3,7 @@ package com.zhaopj.java.thread;
 /**
  * 三个线程，t1执行完成后执行t2,t2执行完成后执行t3
  * @param args
- * @throws InterruptedException
+ * @throws InterruptedException   
  */
 public class ThreadJoin {
 	
