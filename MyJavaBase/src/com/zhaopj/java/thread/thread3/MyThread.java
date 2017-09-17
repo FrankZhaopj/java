@@ -18,10 +18,10 @@ public class MyThread extends Thread {
 	public static void main(String[] args) {
 		Rabbit r = new Rabbit();
 		Tortoies t = new Tortoies();
-		LetOneStop rStip = new LetOneStop(r);
+		LetOneStop rStop = new LetOneStop(r);
 		LetOneStop tStop = new LetOneStop(t);
 		r.calltoback = tStop;
-		t.calltoback = rStip;
+		t.calltoback = rStop;
 		r.start();
 		t.start();
 	}
