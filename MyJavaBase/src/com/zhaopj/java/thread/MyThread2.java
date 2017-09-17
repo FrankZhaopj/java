@@ -10,7 +10,7 @@ import javax.swing.plaf.SliderUI;
  */
 public class MyThread2 implements Runnable {
 	
-	int ticket = 5;
+	int ticket = 50;
 	Object obj = "key";
 
 	@Override
@@ -33,12 +33,12 @@ public class MyThread2 implements Runnable {
 		Thread t1 = new Thread(mt, "窗口1");
 		Thread t2 = new Thread(mt, "窗口2");
 		Thread t3 = new Thread(mt, "窗口3");
-		t1.sleep(100);
+		//t1.sleep(100);
 		t1.start();
-		t2.sleep(100);
+		//t2.sleep(100);
 		t2.start();
 		t3.start();
-		t3.sleep(100);
+		//t3.sleep(100);
 	}
 
 }
