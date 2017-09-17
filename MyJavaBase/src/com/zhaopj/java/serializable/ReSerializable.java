@@ -4,6 +4,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
+/**
+ * 反序列化
+ * 	下面程序实例了反序列化，将user.ser 存储的 User 对象反序列化为对象。
+ */
 public class ReSerializable {
 
 	public static void main(String[] args) {

@@ -5,6 +5,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
+/**
+ * 序列化
+ * 	ObjectOutputStream 类用来序列化一个对象
+ * 	如下实例化了一个 User 对象，并将该对象序列化到一个文件中。
+ * 	该程序执行后，就创建了一个名为 user.ser 文件。
+ */
 public class Serializable {
 
 	public static void main(String[] args) {
