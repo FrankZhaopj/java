@@ -23,9 +23,18 @@ public class UserDaoProxy implements IUserDao {
 	 */
 	@Override
 	public void save() {
-		System.out.println("开始事物...");
+		System.out.println("前置通知：可以开启事物；可以打印日志信息；可以处理请求等操作");
+		System.out.println("下面将要执行被代理的类的方法：");
 		target.save();
-		System.out.println("结束事物...");
+		System.out.println("前置通知：可以提交事物；可以打印日志信息；可以处理响应等操作");
+	}
+	
+	@Override
+	public void del() {
+		System.out.println("前置通知：可以开启事物；可以打印日志信息；可以处理请求等操作");
+		System.out.println("下面将要执行被代理的类的方法：");
+		target.del();
+		System.out.println("前置通知：可以提交事物；可以打印日志信息；可以处理响应等操作");
 	}
 
 }
