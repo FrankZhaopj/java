@@ -1,7 +1,5 @@
 package com.zhaopj.java.proxy.dynamic;
 
-import java.lang.reflect.Proxy;
-
 import com.zhaopj.java.proxy.statics.IUserDao;
 import com.zhaopj.java.proxy.statics.UserDao;
 
@@ -26,9 +24,11 @@ public class App {
 		IUserDao target = new UserDao();
 		//调用JDK动态代理工厂创建动态代理类
 		//（有参构造传入目标代理类，返回object强转成目标代理类接口对象，这也就是为什么JDK动态代理目标类要实现接口的原因）
-		IUserDao proxy = (IUserDao)new ProxyFactory(target).getProxyInstance();
+//		IUserDao proxy = (IUserDao)new ProxyFactory(target).getProxyInstance();
+		IUserDao proxy = (IUserDao)new ProxyJDK(target).getInstance();
 		//获取代理类，调用方法
-		proxy.del();
+		proxy.save();
+//		proxy.del();
 		
 		
 		

@@ -23,7 +23,7 @@ public class App {
         UserDao target = new UserDao();
         //代理对象
 //        UserDao proxy = (UserDao)new ProxyFactory(target).getProxyInstance();
-        UserDao u = (UserDao)new ProxyCglib(target).getInstance();
+        UserDao u = (UserDao)new ProxyCglib1(target).getInstance();
         u.save();
         //执行代理对象的方法
 //        proxy.save();

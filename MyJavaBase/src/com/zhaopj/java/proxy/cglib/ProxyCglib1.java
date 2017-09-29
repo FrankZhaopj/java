@@ -6,11 +6,16 @@ import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
-public class ProxyCglib implements MethodInterceptor {
+/**
+ * cglib動態代理1
+ * 
+ *
+ */
+public class ProxyCglib1 implements MethodInterceptor {
 
 	private Object target;
 	
-	public ProxyCglib(Object target) {
+	public ProxyCglib1(Object target) {
 		this.target = target;
 	}
 	
